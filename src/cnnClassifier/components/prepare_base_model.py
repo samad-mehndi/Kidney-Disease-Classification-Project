@@ -54,6 +54,7 @@ class PrepareBaseModel:
     
     
     def update_base_model(self):
+        print("Preparing full model... Classes -> ", self.config.params_classes)
         self.full_model = self._prepare_full_model(
             model=self.model,
             classes=self.config.params_classes,
