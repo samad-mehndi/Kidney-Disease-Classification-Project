@@ -1,3 +1,9 @@
+import sys
+import os
+
+# Add the 'src' directory to the path
+sys.path.append(os.path.join(os.getcwd(), 'src'))
+
 from cnnClassifier.config.configuration import ConfigurationManager
 from cnnClassifier.components.prepare_base_model import PrepareBaseModel
 from cnnClassifier import logger

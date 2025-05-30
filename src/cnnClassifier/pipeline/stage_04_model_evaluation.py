@@ -1,3 +1,9 @@
+import sys
+import os
+
+# Add the 'src' directory to the path
+sys.path.append(os.path.join(os.getcwd(), 'src'))
+
 from cnnClassifier.config.configuration import ConfigurationManager
 from cnnClassifier.components.model_evaluation_with_mlflow import Evaluation
 from cnnClassifier import logger
@@ -14,7 +20,7 @@ class ModelEvaluationPipeline:
         evaluation = Evaluation(config=evaluation_config)
         evaluation.evaluation()
         evaluation.save_score()
-        evaluation.log_into_mlflow()
+        # evaluation.log_into_mlflow()
 
 if __name__ == '__main__':
     try:
